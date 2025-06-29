@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to right, #ffd6e7, #ffe6f0);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    #password-section {
+      margin-top: 100px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      background-color: #ff66a3;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #main-content {
+      display: none;
+    }
+
+    h1 {
+      color: #d10068;
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #333;
+    }
+
+    .slideshow {
+      margin: 20px auto;
+      max-width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #999;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Password Section -->
+<div id="password-section">
+  <h2>Hi Sayang 💕</h2>
+  <p>Masukkan nama panggilan awak untuk unlock mesej surprise!</p>
+  <input type="password" id="password" placeholder="Contoh: Hafizuddin">
+  <button class="btn" onclick="checkPassword()">Unlock</button>
+</div>
+
+<!-- Main Surprise Content -->
+<div id="main-content">
+  <h1>I LOVE YOU 💘</h1>
+  <p>Terima kasih sebab selalu ada, sabar, dan sayang saya seadanya. Awak lah hadiah paling indah dalam hidup saya 💑</p>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <img id="slide-img" src="c:\Users\User\Downloads\Telegram Desktop\photo_2025-06-29_11-46-08.jpg" alt="Kenangan">
+  </div>
+
+  <!-- Audio -->
+  <audio controls autoplay loop>
+    <source src="c:\Users\User\Downloads\ANDMESH - ANUGERAH TERINDAH (OFFICIAL MUSIC VIDEO).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <footer>&copy; 2025 Dari hati saya untuk awak 🥰</footer>
+</div>
+
+<script>
+  // Password function
+  function checkPassword() {
+    const pass = document.getElementById("password").value.toLowerCase();
+    const correct = "papa"; // Tukar ikut panggilan manja dia
+
+    if (pass === correct) {
+      document.getElementById("password-section").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+
+      // Mainkan lagu
+      document.getElementById("lagu").play();
+    } else {
+      alert("Ops! Salah password. Cuba panggilan manja yang betul 😉");
+    }
+  }
+
+  // Slideshow function
+  const images = [
+    "photo_2025-06-29_11-56-01.jpg",
+    "photo_2025-06-29_11-46-08.jpg",
+    "photo_2025-06-29_12-13-21.jpg",
+    "photo_2025-06-29_12-13-24.jpg",
+    "photo_2025-06-29_12-13-27.jpg",
+    "photo_2025-06-29_12-13-30.jpg",
+    "photo_2025-06-29_12-13-34.jpg",
+    "photo_2025-06-29_12-13-37.jpg",
+    "photo_2025-06-29_12-13-39.jpg",
+    "photo_2025-06-29_12-13-42.jpg",
+    "photo_2025-06-29_12-13-46.jpg",
+    "photo_2025-06-29_12-13-49.jpg",
+  ];
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % images.length;
+    document.getElementById("slide-img").src = images[i];
+  }, 3000); // 3 saat
+</script>
+
+</body>
+</html>
